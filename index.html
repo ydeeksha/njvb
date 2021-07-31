@@ -1,0 +1,113 @@
+
+<html >
+    <head>
+        <title>All music web app</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+      <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    
+      <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/addons/p5.sound.min.js"></script>
+    
+      <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/addons/p5.sound.min.js"></script>
+      
+     
+    </head>
+    <body background="bts.jpg">
+    <center>
+          <h3 class="btn btn-warning heading"> ALL MUSIC WEB APP
+            <br>
+            <span class="note">NOTE - Get your left hand wrist in front of the webcam to play peter pan song . Get your left hand wrist in front of the webcam to play harry poter song </span>
+            </h3>
+            <h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </h1>
+            <button style="background-color: pink;" class="btn btn-danger" > Play song</button>
+            </center>
+            </body>
+            <style>
+     .heading
+    {
+      font-size: 23px;
+      width: 100%;
+      margin: 0px;
+    background-color: pink;
+    }
+    .note
+    {
+      font-size: 15px;
+      color: black;
+     
+    }
+    body
+    {
+      background-size: cover;	
+    }
+            </style>
+            <script>
+  
+
+  song1 = "";
+  
+  song2 = "";
+
+function preload()
+{
+	song1 = loadSound("file:///C:/Users/sreek/Downloads/AI+MUSIC-20201215T110629Z-001/AI%20MUSIC/music.mp3");
+  song2 = loadSound("file:///C:/Users/sreek/Downloads/AI+MUSIC-20201215T110629Z-001/AI%20MUSIC/music2.mp3");
+}
+
+
+
+function setup() {
+	canvas =  createCanvas(600, 500);
+	canvas.center();
+
+	video = createCapture(VIDEO);
+	video.hide();
+
+	poseNet = ml5.poseNet(video, modelLoaded);
+	poseNet.on('pose', gotPoses);
+}
+
+function modelLoaded() {
+  console.log('PoseNet Is Initialized');
+}
+
+            </script>
+            </html>
+  
